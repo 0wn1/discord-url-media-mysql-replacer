@@ -3,7 +3,7 @@ const mysql = require('mysql2');
 
 const Config = {
 	token: 'xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx', // Discord App Token: https://discord.com/developers/applications
-	channelId: 'xxxxxxxxxxxx', // Text Channel AppdId
+	channelId: 'xxxxxxxxxxxx', // Text Channel AppId
 	DeleteMessages: true // Auto deletes sent messages after replacing media URLs
 };
 
@@ -14,7 +14,8 @@ Config.Database = {
 	database: 'creative' // Database name
 };
 
-Config.Tables = [{
+Config.Tables = [
+	{
 		name: 'smartphone_gallery', // Database table name
 		column: 'url' // Database column name
 	},

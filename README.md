@@ -9,13 +9,13 @@ ________________________________________________________________
 1. **Prerequisites:**
    - Install [Node.js](https://nodejs.org/en/download/) on your operating system.
    - Open the `index.js` file in a text editor ([Visual Studio Code](https://code.visualstudio.com/Download) or [Notepad++](https://notepad-plus-plus.org/downloads/)).
-   - Adjust the `config`, `dbConfig`, and `tables` variables according to your Discord bot token, MySQL database configuration, and table/column names.
+   - Adjust the `Config`, `Database `, and `Tables` variables according to your Discord bot token, MySQL database configuration, and table/column names.
 
 2. **Backup your database:**
    - It's optional but highly recommended to create a backup of your database before running the application.
 
 3. **Installation:**
-   - Run `install.bat` and wait for the libraries to be transferred.
+   - Run `install.bat` and wait for the libraries to be downloaded.
 
 4. **Execution:**
    - Run `start.bat` and wait for the process to complete.

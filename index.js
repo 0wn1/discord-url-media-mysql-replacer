@@ -2,13 +2,13 @@ const { Client, GatewayIntentBits } = require('discord.js');
 const mysql = require('mysql2');
 
 const Config = {
-	token: 'xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx', // Discord App Token: https://discord.com/developers/applications
-	channelId: 'xxxxxxxxxxxx', // Text Channel AppId
+	token: 'xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx', // Discord Bot Token: https://discord.com/developers/applications
+	channelId: 'xxxxxxxxxxxx', // Text Channel Id
 	DeleteMessages: true // Auto deletes sent messages after replacing media URLs
 };
 
 Config.Database = {
-	host: 'localhost', // Database host adress
+	host: 'localhost', // Database host address
 	user: 'root', // Database username
 	password: '', // Database password
 	database: 'creative' // Database name

@@ -60,21 +60,28 @@ async function FetchAndUpdateImages() {
 }
 
 async function GetProxyURL(url) {
+    const channel = client.channels.cache.get(Config.channelId);
+    const Message = await channel.send(url);
 
-	const channel = client.channels.cache.get(Config.channelId);
-	const Message = await channel.send(url);
+    let ValidURL = null;
+    const waitTime = 5000;
+    const startTime = Date.now();
 
-	const ValidURL = Message.embeds[0]?.data?.thumbnail?.proxy_url
+    while (Date.now() - startTime < waitTime) {
+        ValidURL = Message.embeds[0]?.data?.thumbnail?.proxy_url;
+        if (ValidURL) break;
+        await new Promise(resolve => setTimeout(resolve, 100));
+    }
 
-	if (Config.DeleteMessages) {
-		await Message.delete();
-	}
+    if (Config.DeleteMessages) {
+        await Message.delete();
+    }
 
-	if (ValidURL) {
-		return ValidURL;
-	} else {
-		throw new Error('URL not found ');
-	}
+    if (ValidURL) {
+        return ValidURL;
+    } else {
+        throw new Error('URL not found');
+    }
 }
 
 client.on('ready', () => {

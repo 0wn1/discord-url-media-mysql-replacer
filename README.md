@@ -24,6 +24,5 @@ ________________________________________________________________
 ________________________________________________________________
 
 ### Notes:
-- Sometimes, the application may fail to find and replace the URL in the database. If this occurs, repeat the process.
-- It's advisable to run the application before starting your server.
+- It's advisable to run the application before starting your FiveM server.
 - This application has not been tested extensively on databases with large datasets. Adjustments may be required for optimal performance.

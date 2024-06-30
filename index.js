@@ -13,10 +13,15 @@ const Config = {
         database: 'database' // Database name
     },
     Tables: [
-        {
-            name: 'smartphone_gallery', // Database table name
-            column: 'url', // Database column name
+	{
+            name: 'smartphone_instagram_posts', // Database table name
+            column: 'image', // Database column name
             startFrom: 1 // Start from this ID
+        },
+        {
+            name: 'smartphone_gallery',
+            column: 'url',
+            startFrom: 1
         },
         {
             name: 'smartphone_instagram',
